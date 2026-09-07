@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LUMÉ — Beauty & Salon</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+<header class="header">
+
+    <div class="logo">
+        LUMÉ
+        <span>BEAUTY & SALON</span>
+    </div>
+
+    <nav class="navbar">
+
+        <a href="#home">HOME</a>
+
+        <a href="#services">SERVICES</a>
+
+        <a href="#bridal">BRIDAL</a>
+
+        <a href="#offers">OFFERS</a>
+
+        <a href="#about">ABOUT</a>
+
+        <a href="#contact">CONTACT</a>
+
+        <a href="#gallery">GALLERY</a>
+
+        <a href="#booking" class="nav-book">
+    BOOK NOW
+</a>
+
+    </nav>
+
+    <button class="book-btn">
+        BOOK NOW
+    </button>
+
+</header>
+
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                BEAUTY • STYLE • CONFIDENCE
+            </p>
+
+            <h1>
+                Your Beauty.<br>
+                Your Moment.
+            </h1>
+
+            <p class="hero-text">
+                Discover premium beauty and salon
+                experiences designed just for you.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn">
+                    BOOK AN APPOINTMENT
+                </button>
+
+                <button class="secondary-btn">
+                    EXPLORE SERVICES
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section id="services" class="services-section">
+
+        <p class="section-label">
+            WHAT WE OFFER
+        </p>
+
+        <h2>
+            Our Services
+        </h2>
+
+        <div class="services-container">
+
+            <div class="service-card">
+                <div class="service-image hair"></div>
+
+                <div class="service-info">
+                    <h3>Hair</h3>
+                    <p>
+                        Cuts, styling, colouring and
+                        professional hair treatments.
+                    </p>
+                    <a href="#">EXPLORE →</a>
+                </div>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-image skin"></div>
+
+                <div class="service-info">
+                    <h3>Skin</h3>
+                    <p>
+                        Facials and skincare treatments
+                        for naturally glowing skin.
+                    </p>
+                    <a href="#">EXPLORE →</a>
+                </div>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-image makeup"></div>
+
+                <div class="service-info">
+                    <h3>Makeup</h3>
+                    <p>
+                        Professional makeup for every
+                        celebration and occasion.
+                    </p>
+                    <a href="#">EXPLORE →</a>
+                </div>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-image nails"></div>
+
+                <div class="service-info">
+                    <h3>Nails</h3>
+                    <p>
+                        Beautiful manicures and nail
+                        treatments for the perfect finish.
+                    </p>
+                    <a href="#">EXPLORE →</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- OFFERS -->
+
+<!-- OFFERS SECTION -->
+
+<section id="offers" class="offers-section">
+
+    <div class="offers-heading">
+
+        <p class="section-label">
+            SPECIAL OFFERS
+        </p>
+
+        <h2>
+            Beauty, Made<br>
+            More Special.
+        </h2>
+
+        <p>
+            Treat yourself with our specially
+            curated beauty packages.
+        </p>
+
+    </div>
+
+
+    <div class="offers-container">
+
+
+        <!-- OFFER 1 -->
+
+        <div class="offer-card">
+
+            <div class="offer-number">
+                01
+            </div>
+
+            <h3>
+                Glow Package
+            </h3>
+
+            <p>
+                Facial + cleanup + head massage
+                for a fresh and glowing look.
+            </p>
+
+            <div class="offer-price">
+                ₹1,499
+            </div>
+
+            <button
+                onclick="selectOffer('Glow Package')"
+            >
+                BOOK NOW →
+            </button>
+
+        </div>
+
+
+        <!-- OFFER 2 -->
+
+        <div class="offer-card featured">
+
+            <div class="offer-number">
+                02
+            </div>
+
+            <span class="popular">
+                MOST POPULAR
+            </span>
+
+            <h3>
+                Hair & Skin Combo
+            </h3>
+
+            <p>
+                Hair spa + facial + professional
+                styling for your complete makeover.
+            </p>
+
+            <div class="offer-price">
+                ₹2,499
+            </div>
+
+            <button
+                onclick="selectOffer('Hair & Skin Combo')"
+            >
+                BOOK NOW →
+            </button>
+
+        </div>
+
+
+        <!-- OFFER 3 -->
+
+        <div class="offer-card">
+
+            <div class="offer-number">
+                03
+            </div>
+
+            <h3>
+                Bridal Special
+            </h3>
+
+            <p>
+                Complete bridal beauty consultation,
+                makeup and hair styling.
+            </p>
+
+            <div class="offer-price">
+                ₹9,999
+            </div>
+
+            <button
+                onclick="selectOffer('Bridal Special')"
+            >
+                BOOK NOW →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BRIDAL SECTION -->
+
+<section id="bridal" class="bridal-section">
+
+    <div class="bridal-image">
+        <img src="images/bridal.jpg" alt="Bridal Makeup">
+    </div>
+
+    <div class="bridal-content">
+
+        <p class="section-label">
+            BRIDAL BEAUTY
+        </p>
+
+        <h2>
+            Your Big Day.<br>
+            Your Perfect Look.
+        </h2>
+
+        <p>
+            From elegant bridal makeup to beautiful
+            hair styling, our bridal experts create
+            a look that feels completely you.
+        </p>
+
+        <div class="bridal-services">
+
+            <div>
+                <h3>Bridal Makeup</h3>
+                <p>Professional makeup designed for your special day.</p>
+            </div>
+
+            <div>
+                <h3>Hair Styling</h3>
+                <p>Elegant hairstyles created to complement your look.</p>
+            </div>
+
+            <div>
+                <h3>Bridal Packages</h3>
+                <p>Complete beauty packages for your wedding celebrations.</p>
+            </div>
+
+        </div>
+
+        <button
+            class="primary-btn"
+            onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})"
+        >
+            BOOK BRIDAL APPOINTMENT
+        </button>
+
+    </div>
+
+</section>
+
+<!-- GALLERY SECTION -->
+
+<section id="gallery" class="gallery-section">
+
+    <div class="gallery-heading">
+
+        <p class="section-label">
+            OUR WORK
+        </p>
+
+        <h2>
+            Beauty In<br>
+            Every Detail.
+        </h2>
+
+        <p>
+            Explore some of our favourite beauty,
+            hair and bridal transformations.
+        </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item large">
+            <img
+                src="images/gallery1.jpg"
+                alt="Salon beauty work"
+            >
+        </div>
+
+
+        <div class="gallery-item">
+            <img
+                src="images/gallery2.jpg"
+                alt="Hair styling"
+            >
+        </div>
+
+
+        <div class="gallery-item">
+            <img
+                src="images/gallery3.jpg"
+                alt="Makeup"
+            >
+        </div>
+
+
+        <div class="gallery-item">
+            <img
+                src="images/gallery4.jpg"
+                alt="Beauty treatment"
+            >
+        </div>
+
+
+        <div class="gallery-item large">
+            <img
+                src="images/gallery5.jpg"
+                alt="Bridal beauty"
+            >
+        </div>
+
+
+        <div class="gallery-item">
+            <img
+                src="images/gallery6.jpg"
+                alt="Salon styling"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="images/gallery7.jpg"
+                alt="Salon styling"
+            >
+        </div>
+
+    </div>
+
+</section>
+<!-- ABOUT SECTION -->
+
+<section id="about" class="about-section">
+
+    <div class="about-image">
+
+        <img
+            src="images/about.jpg"
+            alt="LUMÉ Beauty Salon"
+        >
+
+    </div>
+
+
+    <div class="about-content">
+
+        <p class="section-label">
+            ABOUT LUMÉ
+        </p>
+
+        <h2>
+            Beauty That<br>
+            Feels Like You.
+        </h2>
+
+        <p>
+            At LUMÉ, we believe beauty is personal.
+            Our team combines modern techniques,
+            professional expertise and a warm
+            experience to help you look and feel
+            your absolute best.
+        </p>
+
+        <p>
+            From everyday self-care to your most
+            important celebrations, we're here
+            to make every visit special.
+        </p>
+
+        <div class="about-stats">
+
+            <div class="stat">
+                <strong>10+</strong>
+                <span>Years Experience</span>
+            </div>
+
+            <div class="stat">
+                <strong>5K+</strong>
+                <span>Happy Clients</span>
+            </div>
+
+            <div class="stat">
+                <strong>20+</strong>
+                <span>Beauty Services</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BOOKING SECTION -->
+
+<section id="booking" class="booking-section">
+
+    <div class="booking-heading">
+
+        <p class="section-label">
+            RESERVE YOUR MOMENT
+        </p>
+
+        <h2>
+            Book An Appointment
+        </h2>
+
+        <p>
+            Tell us what you need and choose a
+            convenient date and time.
+        </p>
+
+    </div>
+
+
+    <form class="booking-form">
+
+        <!-- NAME + PHONE -->
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="name">
+                    FULL NAME
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="phone">
+                    PHONE NUMBER
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="+91 XXXXX XXXXX"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- SERVICE + DATE -->
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="service">
+                    CHOOSE SERVICE
+                </label>
+
+                <select id="service" required>
+
+                    <option value="">
+                        Select a service
+                    </option>
+
+                    <option value="Hair">
+                        Hair
+                    </option>
+
+                    <option value="Skin">
+                        Skin
+                    </option>
+
+                    <option value="Makeup">
+                        Makeup
+                    </option>
+
+                    <option value="Nails">
+                        Nails
+                    </option>
+
+                    <option value="Bridal">
+                        Bridal
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="date">
+                    PREFERRED DATE
+                </label>
+
+                <input
+                    type="date"
+                    id="date"
+                    required
+                >
+                <script>
+    document.getElementById("date").min =
+        new Date().toISOString().split("T")[0];
+</script>
+
+            </div>
+
+        </div>
+
+
+        <!-- PACKAGE -->
+
+        <div class="form-group">
+
+    <label for="package">
+        CHOOSE PACKAGE
+    </label>
+
+    <select id="package" required>
+
+        <option value="">
+            Select a package
+        </option>
+
+    </select>
+
+</div>
+
+
+        <!-- TIME -->
+
+        <div class="form-group">
+
+            <label for="time">
+                PREFERRED TIME
+            </label>
+
+            <select id="time" required>
+
+                <option value="">
+                    Select a time
+                </option>
+
+                <option value="10:00 AM">
+                    10:00 AM
+                </option>
+
+                <option value="11:00 AM">
+                    11:00 AM
+                </option>
+
+                <option value="12:00 PM">
+                    12:00 PM
+                </option>
+
+                <option value="1:00 PM">
+                    1:00 PM
+                </option>
+
+                <option value="2:00 PM">
+                    2:00 PM
+                </option>
+
+                <option value="3:00 PM">
+                    3:00 PM
+                </option>
+
+                <option value="4:00 PM">
+                    4:00 PM
+                </option>
+
+                <option value="5:00 PM">
+                    5:00 PM
+                </option>
+
+                <option value="6:00 PM">
+                    6:00 PM
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div class="form-group">
+
+            <label for="message">
+                MESSAGE
+                <span>(OPTIONAL)</span>
+            </label>
+
+            <textarea
+                id="message"
+                rows="4"
+                placeholder="Anything you'd like us to know?"
+            ></textarea>
+
+        </div>
+
+
+        <!-- WHATSAPP BUTTON -->
+
+        <button
+            type="submit"
+            class="submit-btn"
+        >
+            CONFIRM APPOINTMENT
+        </button>
+
+
+        <p
+            id="booking-message"
+            class="booking-message"
+        ></p>
+
+    </form>
+
+</section>
+
+    <!-- FOOTER -->
+
+    <footer id="contact">
+
+        <div class="footer-logo">
+            LUMÉ
+        </div>
+
+        <p>
+            Beauty • Style • Confidence
+        </p>
+
+        <p class="copyright">
+            © 2026 LUMÉ Beauty Salon
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

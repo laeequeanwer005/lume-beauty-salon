@@ -1,0 +1,1842 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background: #fff;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background: white;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 500;
+    letter-spacing: 6px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logo span {
+    font-size: 7px;
+    letter-spacing: 3px;
+    margin-top: 4px;
+    opacity: 0.6;
+}
+
+.navbar {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #222;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    opacity: 0.5;
+}
+
+.book-btn {
+    background: #111;
+    color: white;
+
+    border: none;
+
+    padding: 13px 22px;
+
+    cursor: pointer;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background: #333;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 8% 80px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.70),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title {
+    font-size: 13px;
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 7vw, 95px);
+
+    line-height: 0.95;
+
+    font-weight: 500;
+
+    margin-bottom: 30px;
+}
+
+.hero-text {
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    max-width: 500px;
+
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+
+    padding: 16px 25px;
+
+    border: none;
+
+    cursor: pointer;
+
+    letter-spacing: 1px;
+
+    font-size: 12px;
+}
+
+.primary-btn {
+    background: white;
+    color: #111;
+}
+
+.secondary-btn {
+    background: transparent;
+    color: white;
+
+    border: 1px solid white;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-section {
+
+    padding: 120px 7%;
+
+    text-align: center;
+}
+
+.section-label {
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+
+    opacity: 0.6;
+}
+
+.services-section h2 {
+
+    font-size: 50px;
+
+    font-weight: 400;
+
+    margin-bottom: 60px;
+}
+
+.services-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.service-card {
+
+    text-align: left;
+
+    background: #f7f7f7;
+}
+
+.service-image {
+
+    height: 300px;
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Temporary image backgrounds */
+
+.hair {
+    background-image:
+        url("images/hair.jpg");
+}
+
+.skin {
+    background-image:
+        url("images/skin.jpg");
+}
+
+.makeup {
+    background-image:
+        url("images/makeup.jpg");
+}
+
+.nails {
+    background-image:
+        url("images/nails.jpg");
+}
+
+
+.service-info {
+
+    padding: 25px;
+}
+
+.service-info h3 {
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+    margin-bottom: 12px;
+}
+
+.service-info p {
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #666;
+
+    margin-bottom: 20px;
+}
+
+.service-info a {
+
+    text-decoration: none;
+
+    color: #111;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #111;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.footer-logo {
+
+    font-size: 30px;
+
+    letter-spacing: 6px;
+
+    margin-bottom: 15px;
+}
+
+footer p {
+
+    opacity: 0.7;
+
+    font-size: 14px;
+}
+
+.copyright {
+
+    margin-top: 40px;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .book-btn {
+        padding: 10px 15px;
+    }
+
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+@media (max-width: 700px) {
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .booking-form {
+        padding: 30px 20px;
+    }
+
+}
+@media (max-width: 700px) {
+
+    .bridal-section {
+        grid-template-columns: 1fr;
+    }
+
+    .bridal-image {
+        height: 500px;
+    }
+
+    .bridal-content {
+        padding: 60px 30px;
+    }
+
+}
+
+/* =========================
+   OFFERS
+========================= */
+
+/* =========================
+   OFFERS SECTION
+========================= */
+
+.offers-section {
+    padding: 120px 7%;
+    background: #111;
+    color: white;
+}
+
+.offers-heading {
+    max-width: 650px;
+    margin-bottom: 70px;
+}
+
+.offers-heading .section-label {
+    color: #aaa;
+}
+
+.offers-heading h2 {
+    font-size: clamp(45px, 6vw, 75px);
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.offers-heading > p:last-child {
+    color: #aaa;
+    line-height: 1.7;
+}
+
+
+.offers-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+.offer-card {
+    position: relative;
+
+    padding: 45px 35px;
+
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #1d1d1d;
+
+    border: 1px solid #333;
+
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-8px);
+}
+
+
+.offer-card.featured {
+    background: #f5f1ed;
+    color: #111;
+}
+
+
+.offer-number {
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.5;
+
+    margin-bottom: 55px;
+}
+
+
+.popular {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    padding: 7px 10px;
+
+    border: 1px solid #999;
+}
+
+
+.offer-card h3 {
+    font-size: 28px;
+    font-weight: 400;
+
+    margin-bottom: 15px;
+}
+
+
+.offer-card p {
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #999;
+
+    max-width: 330px;
+}
+
+.offer-card.featured p {
+    color: #666;
+}
+
+
+.offer-price {
+    font-size: 30px;
+
+    margin-top: auto;
+
+    margin-bottom: 25px;
+}
+
+
+.offer-card button {
+    width: 100%;
+
+    padding: 15px;
+
+    background: transparent;
+
+    border: 1px solid #777;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+
+.offer-card.featured button {
+    background: #111;
+    color: white;
+    border-color: #111;
+}
+
+
+.offer-card button:hover {
+    opacity: 0.7;
+}
+/* =========================
+   BOOKING
+========================= */
+
+.booking-section {
+
+    padding: 120px 8%;
+
+    background: #f5f1ed;
+}
+
+.booking-heading {
+
+    text-align: center;
+
+    max-width: 650px;
+
+    margin: 0 auto 60px;
+}
+
+.booking-heading h2 {
+
+    font-size: clamp(45px, 6vw, 70px);
+
+    font-weight: 400;
+
+    margin: 20px 0;
+}
+
+.booking-heading > p:last-child {
+
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+.booking-form {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 50px;
+
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.08);
+}
+
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 25px;
+}
+
+
+.form-group label {
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+
+    text-transform: uppercase;
+}
+
+
+.form-group input,
+.form-group select {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    background: white;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+
+    border-color: #111;
+}
+
+
+.submit-btn {
+
+    width: 100%;
+
+    padding: 17px;
+
+    border: none;
+
+    background: #111;
+
+    color: white;
+
+    cursor: pointer;
+
+    letter-spacing: 2px;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+
+.submit-btn:hover {
+
+    background: #333;
+}
+/* =========================
+   BRIDAL SECTION
+========================= */
+
+.bridal-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 700px;
+}
+
+.bridal-image {
+    overflow: hidden;
+}
+
+.bridal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.bridal-content {
+    background: #f5f1ed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 80px;
+}
+
+.bridal-content h2 {
+    font-size: clamp(45px, 5vw, 70px);
+    font-weight: 400;
+    line-height: 1;
+
+    margin: 20px 0 25px;
+}
+
+.bridal-content > p {
+    max-width: 500px;
+
+    color: #555;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+.bridal-services {
+    display: grid;
+    gap: 20px;
+
+    margin-bottom: 35px;
+}
+
+.bridal-services h3 {
+    font-size: 18px;
+    font-weight: 500;
+
+    margin-bottom: 5px;
+}
+
+.bridal-services p {
+    font-size: 13px;
+    color: #777;
+}
+@media (max-width: 700px) {
+
+    .offers-container {
+        grid-template-columns: 1fr;
+    }
+
+    .offer-card {
+        min-height: 350px;
+    }
+
+}
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    padding: 120px 7%;
+    background: #ffffff;
+}
+
+.gallery-heading {
+    max-width: 650px;
+    margin-bottom: 60px;
+}
+
+.gallery-heading h2 {
+    font-size: clamp(45px, 6vw, 75px);
+    font-weight: 400;
+    line-height: 1;
+
+    margin: 20px 0;
+}
+
+.gallery-heading > p:last-child {
+    max-width: 500px;
+
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+/* Gallery grid */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-auto-rows: 300px;
+
+    gap: 15px;
+}
+
+
+.gallery-item {
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+.gallery-item.large {
+    grid-row: span 2;
+}
+
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+
+/* Image zoom */
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+@media (max-width: 700px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+
+        grid-auto-rows: 220px;
+
+        gap: 10px;
+    }
+
+    .gallery-item.large {
+        grid-row: span 2;
+    }
+
+}
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 700px;
+
+    background: #f5f1ed;
+}
+
+
+.about-image {
+    overflow: hidden;
+}
+
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.about-content {
+    padding: 90px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.about-content h2 {
+    font-size: clamp(45px, 5vw, 70px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin: 20px 0 30px;
+}
+
+
+.about-content > p {
+    max-width: 520px;
+
+    color: #555;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* Statistics */
+
+.about-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 30px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #d8d2cc;
+}
+
+
+.stat {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.stat strong {
+    font-size: 30px;
+
+    font-weight: 400;
+}
+
+
+.stat span {
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    color: #777;
+
+    text-transform: uppercase;
+}
+@media (max-width: 700px) {
+
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        height: 450px;
+    }
+
+    .about-content {
+        padding: 60px 30px;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+/* =========================
+   BOOKING SECTION
+========================= */
+
+.booking-section {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 80px;
+
+    padding: 120px 7%;
+
+    background: #f5f1ed;
+}
+
+
+/* Introduction */
+
+.booking-intro {
+    padding-top: 20px;
+}
+
+
+.booking-intro h2 {
+    font-size: clamp(45px, 6vw, 75px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin: 20px 0 30px;
+}
+
+
+.booking-intro > p:last-child {
+    max-width: 420px;
+
+    color: #666;
+
+    line-height: 1.8;
+}
+
+
+/* Form */
+
+.booking-form {
+    background: #ffffff;
+
+    padding: 50px;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.06);
+}
+
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    color: #555;
+}
+
+
+.form-group label span {
+    color: #999;
+
+    letter-spacing: 0;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    background: #fff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: border-color 0.3s ease;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #222;
+}
+
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* Button */
+
+.booking-button {
+    width: 100%;
+
+    padding: 18px;
+
+    border: none;
+
+    background: #111;
+
+    color: white;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.booking-button:hover {
+    background: #333;
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   WHATSAPP FALLBACK MESSAGE
+   ======================================== */
+
+.booking-message {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 22px;
+}
+
+.booking-message.error {
+    color: #8b7355;
+}
+
+.booking-message.success {
+    color: #8b7355;
+}
+
+/* WhatsApp fallback link */
+.booking-message a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 11px 22px;
+
+    background: #8b7355;
+    color: #ffffff;
+
+    border: 1px solid #8b7355;
+    border-radius: 3px;
+
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.booking-message a:hover {
+    background: transparent;
+    color: #8b7355;
+    transform: translateY(-1px);
+}
+/* ========================================
+   MOBILE BOOKING FORM
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    .booking-form {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .booking-form .form-row {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .booking-form .form-group {
+        width: 100%;
+    }
+
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    .booking-form textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .booking-form .submit-btn {
+        width: 100%;
+        min-height: 50px;
+        margin-top: 10px;
+    }
+
+    .booking-message {
+        padding: 0 10px;
+        font-size: 13px;
+    }
+
+    .booking-message a {
+        width: auto;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+/* ========================================
+   MOBILE BOOKING FORM FIX
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Prevent the booking section from creating horizontal scroll */
+    .booking-section {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    /* Keep the form inside the screen */
+    .booking-form {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    /* Stack every row vertically */
+    .booking-form .form-row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 18px;
+        margin: 0;
+    }
+
+    /* Each field takes the full available width */
+    .booking-form .form-group {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    /* Inputs, selects and textarea stay inside the screen */
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    /* Prevent long text from forcing the page wider */
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+        overflow: hidden;
+    }
+
+    /* Make the textarea comfortable on mobile */
+    .booking-form textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    /* Full-width appointment button */
+    .booking-form .submit-btn {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        min-height: 52px;
+        margin: 20px 0 0;
+        padding: 14px 18px;
+        box-sizing: border-box;
+    }
+
+    /* Booking message stays inside the screen */
+    .booking-message {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    /* Fallback WhatsApp link fits smaller screens */
+    .booking-message a {
+        max-width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+
+
+/* Extra-small phones */
+@media (max-width: 400px) {
+
+    .booking-form {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+        font-size: 16px;
+    }
+
+    .booking-form .submit-btn {
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+}
+/* ========================================
+   MOBILE BOOKING FORM
+   SPACING + TOUCH TARGETS
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Space between form rows */
+    .booking-form .form-row {
+        gap: 22px;
+        margin-bottom: 22px;
+    }
+
+    /* Space inside each field */
+    .booking-form .form-group {
+        margin-bottom: 4px;
+    }
+
+    /* Easy-to-read labels */
+    .booking-form label {
+        display: block;
+        margin-bottom: 9px;
+        font-size: 12px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+    }
+
+    /* Comfortable touch targets */
+    .booking-form input,
+    .booking-form select {
+        min-height: 50px;
+        padding: 13px 14px;
+        font-size: 16px;
+        line-height: 1.4;
+        border-radius: 3px;
+    }
+
+    /* Textarea */
+    .booking-form textarea {
+        min-height: 130px;
+        padding: 13px 14px;
+        font-size: 16px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+
+    /* Give the select arrow enough room */
+    .booking-form select {
+        padding-right: 40px;
+    }
+
+    /* Confirm Appointment button */
+    .booking-form .submit-btn {
+        width: 100%;
+        min-height: 54px;
+        padding: 15px 20px;
+        margin-top: 8px;
+
+        font-size: 13px;
+        line-height: 1.3;
+        letter-spacing: 1px;
+
+        cursor: pointer;
+    }
+
+    /* Space around the WhatsApp fallback */
+    .booking-message {
+        margin-top: 16px;
+        padding: 0 5px;
+        line-height: 1.6;
+    }
+
+    /* Make fallback link easy to tap */
+    .booking-message a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        min-height: 48px;
+        padding: 12px 20px;
+
+        box-sizing: border-box;
+    }
+}
+
+
+/* ========================================
+   SMALL PHONES
+   ======================================== */
+
+@media (max-width: 400px) {
+
+    .booking-form {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .booking-form .form-row {
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .booking-form label {
+        margin-bottom: 8px;
+    }
+
+    .booking-form input,
+    .booking-form select {
+        min-height: 50px;
+    }
+
+    .booking-form textarea {
+        min-height: 120px;
+    }
+
+    .booking-form .submit-btn {
+        min-height: 54px;
+        padding: 15px 14px;
+        font-size: 12px;
+    }
+}
+/* ========================================
+   MOBILE BOOKING FORM
+   FOCUS STYLES
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Input, select & textarea focus */
+    .booking-form input:focus,
+    .booking-form select:focus,
+    .booking-form textarea:focus {
+        outline: none;
+
+        border-color: #8b7355;
+
+        box-shadow:
+            0 0 0 3px rgba(139, 115, 85, 0.15);
+
+        background-color: #fffdf9;
+
+        transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease,
+            background-color 0.2s ease;
+    }
+
+    /* Confirm Appointment button focus */
+    .booking-form .submit-btn:focus {
+        outline: none;
+
+        box-shadow:
+            0 0 0 4px rgba(139, 115, 85, 0.22);
+
+        transform: translateY(-1px);
+
+        transition:
+            box-shadow 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    /* Keyboard users get a stronger focus indicator */
+    .booking-form input:focus-visible,
+    .booking-form select:focus-visible,
+    .booking-form textarea:focus-visible,
+    .booking-form .submit-btn:focus-visible {
+        outline: 2px solid #8b7355;
+        outline-offset: 2px;
+    }
+}
+/* ========================================
+   MOBILE BOOKING FORM
+   HOVER + ACTIVE + DISABLED STATES
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* ----------------------------------------
+       INPUTS, SELECT & TEXTAREA — HOVER
+       ---------------------------------------- */
+
+    .booking-form input:hover,
+    .booking-form select:hover,
+    .booking-form textarea:hover {
+        border-color: #8b7355;
+    }
+
+
+    /* ----------------------------------------
+       INPUTS, SELECT & TEXTAREA — ACTIVE
+       ---------------------------------------- */
+
+    .booking-form input:active,
+    .booking-form select:active,
+    .booking-form textarea:active {
+        border-color: #8b7355;
+        background-color: #fffdf9;
+    }
+
+
+    /* ----------------------------------------
+       INPUTS, SELECT & TEXTAREA — DISABLED
+       ---------------------------------------- */
+
+    .booking-form input:disabled,
+    .booking-form select:disabled,
+    .booking-form textarea:disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+        background-color: #f3f1ed;
+        border-color: #d8d2c9;
+        box-shadow: none;
+    }
+
+
+    /* ----------------------------------------
+       CONFIRM APPOINTMENT — HOVER
+       ---------------------------------------- */
+
+    .booking-form .submit-btn:hover:not(:disabled) {
+        opacity: 0.92;
+        transform: translateY(-1px);
+        cursor: pointer;
+    }
+
+
+    /* ----------------------------------------
+       CONFIRM APPOINTMENT — ACTIVE
+       ---------------------------------------- */
+
+    .booking-form .submit-btn:active:not(:disabled) {
+        opacity: 0.82;
+        transform: translateY(0);
+    }
+
+
+    /* ----------------------------------------
+       CONFIRM APPOINTMENT — DISABLED
+       ---------------------------------------- */
+
+    .booking-form .submit-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+
+/* ========================================
+   REDUCE MOTION FOR USERS WHO PREFER IT
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea,
+    .booking-form .submit-btn {
+        transition: none !important;
+        transform: none !important;
+    }
+}
+/* ========================================
+   BOOKING FORM
+   VALIDATION ERROR + SUCCESS STATES
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* ----------------------------------------
+       INVALID FIELDS
+       ---------------------------------------- */
+
+    .booking-form input:invalid:not(:placeholder-shown),
+    .booking-form select:invalid,
+    .booking-form textarea:invalid:not(:placeholder-shown) {
+        border-color: #b85c5c;
+        background-color: #fffafa;
+
+        box-shadow:
+            0 0 0 3px rgba(184, 92, 92, 0.12);
+    }
+
+
+    /* ----------------------------------------
+       VALID FIELDS
+       ---------------------------------------- */
+
+    .booking-form input:valid:not(:placeholder-shown),
+    .booking-form select:valid,
+    .booking-form textarea:valid:not(:placeholder-shown) {
+        border-color: #8b7355;
+        background-color: #fffdf9;
+    }
+
+
+    /* ----------------------------------------
+       ERROR MESSAGE
+       ---------------------------------------- */
+
+    .booking-message.error {
+        margin-top: 16px;
+        padding: 12px 14px;
+
+        color: #8f4d4d;
+        background-color: #fff8f8;
+
+        border: 1px solid #dfbcbc;
+        border-radius: 3px;
+
+        font-size: 13px;
+        line-height: 1.5;
+        text-align: center;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ----------------------------------------
+       SUCCESS MESSAGE
+       ---------------------------------------- */
+
+    .booking-message.success {
+        margin-top: 16px;
+        padding: 12px 14px;
+
+        color: #6f634f;
+        background-color: #faf8f3;
+
+        border: 1px solid #cfc3ad;
+        border-radius: 3px;
+
+        font-size: 13px;
+        line-height: 1.5;
+        text-align: center;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ----------------------------------------
+       ERROR FALLBACK WHATSAPP LINK
+       ---------------------------------------- */
+
+    .booking-message.error a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        min-height: 48px;
+        margin-top: 10px;
+        padding: 12px 20px;
+
+        background: #8b7355;
+        color: #ffffff;
+
+        border: 1px solid #8b7355;
+        border-radius: 3px;
+
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+
+        text-decoration: none;
+        box-sizing: border-box;
+
+        transition: all 0.2s ease;
+    }
+
+    .booking-message.error a:active {
+        transform: translateY(1px);
+        opacity: 0.85;
+    }
+
+
+    /* ----------------------------------------
+       SUCCESS STATE ON CONFIRM BUTTON
+       ---------------------------------------- */
+
+    .booking-form .submit-btn.success {
+        background-color: #8b7355;
+        border-color: #8b7355;
+        color: #ffffff;
+
+        cursor: default;
+        pointer-events: none;
+    }
+
+
+    /* ----------------------------------------
+       ERROR STATE ON CONFIRM BUTTON
+       ---------------------------------------- */
+
+    .booking-form .submit-btn.error {
+        border-color: #b85c5c;
+        box-shadow:
+            0 0 0 3px rgba(184, 92, 92, 0.12);
+    }
+}
+
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .booking-message a {
+        transition: none !important;
+    }
+}
+/* ========================================
+   INLINE BOOKING VALIDATION MESSAGES
+   ======================================== */
+
+.booking-form .field-message {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+
+    font-size: 12px;
+    line-height: 1.45;
+    letter-spacing: 0.2px;
+
+    box-sizing: border-box;
+}
+
+.booking-form .field-message.error {
+    color: #9a5555;
+}
+
+.booking-form .field-message.success {
+    color: #75664f;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .booking-form .field-message {
+        margin-top: 7px;
+        padding: 0 2px;
+
+        font-size: 12px;
+        line-height: 1.5;
+
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .booking-form .field-message.error {
+        color: #9a5555;
+    }
+
+    .booking-form .field-message.success {
+        color: #75664f;
+    }
+}
+
+
+/* Very small phones */
+@media (max-width: 400px) {
+
+    .booking-form .field-message {
+        margin-top: 6px;
+        font-size: 11px;
+    }
+}
